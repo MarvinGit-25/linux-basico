@@ -1,0 +1,184 @@
+       informaçôes do sistema
+
+env | grep CURRENT_DESKTOP - mostra interface grafica.
+hostname - Mostra o nome da maquina.
+uname -a - serve para exibir informações do sistema.
+uname -r - mostra a versão do kernel.
+umane -p - mostra o procesador.
+date - mostra a data e a hora do sisitema.
+----------------------------------------------------------------
+       variáveis  
+
+echo - escreve na tela.
+echo $$ - mostra o pid da seção atual.
+var=Marcos - criando uma variavel.
+export var=Marcos - criando a variavel e exportando.
+var="Marcos Vinicius" - para separar palavras usa-se "" ou ''.
+var=`date` - armazena o resultado do comando dentro da variável.
+echo $var - mostra o conteudo da variavel.
+bash - abri um outro processo no terminal.
+export - exporta variaveis para os processos filhos.
+set - mostra todas as variaveis exportadas ou não.
+env - só mostra as variaveis exportadas.
+set |less - serve pra pagina o comando mostra controladamente.
+env |less - serve pra pagina o comando mostra controladamente.
+------------------------------------------------------------------
+        Ajuda
+
+--help - ajuda do comando.
+man (comando) - manual do comando, bem mais completo.
+man bash - manual do bash.
+type (nome do comando) - mostra o tipo do comando, se é interno ou externo.
+info - também me mostra um manual do comando.
+whatis (nome do comando) - mostra uma definição simples do comando.
+apropos (nome do comando) - consulta um banco de dados contendo a descrição dos comandos.
+whereis (nome do comando) - mostra a onde esta o comando.
+which (nome do comando) - mostra o caminho completo do comando.
+ls -l - mostra uma lista mais detalhada, permissões de arquivo...
+ls -lh - lista de arquivos com formato legível, de uma forma que quem ler vai conseguir identificar o que é cada item.
+ls -a - mostra arquivos e diretórios ocultos.
+ls -ltr - lista o arquivos de forma organizada, e o critério vai ser a data de alteração do arquivo.
+-----------------------------------------------------------------------
+
+        caracteres
+
+| - combina os comandos.
+; - execulta os comandos sequencialmente.
+. - diretório atual que vc esta.
+* - que substitui um conjunto (zero ou mais de zero) de caracteres;
+[] - fitra por caracteres especificados dentro dos colchetes; 
+{} - filtra uma sequência de caracteres especificados dentro das chaves.
+? - filtra por um caractere.
+--------------------------------------------------------------------------
+        links
+
+ln -s (arquivo > nome do link) - Cria um link simbólico que aponta para um diretório ou arquivo.
+ln (arquivo > nome do link) - Cria um link fisíco que aponta para o mesmo lugar no disco.
+-----------------------------------------------------------------------------
+        pastas e arquivos
+
+mkdir - cria um diretório.
+mkdir -p cria arvores de diretórios.
+rmdir - remove diretórios vazios.
+touch - cria um arquivo em branco.
+rm - apaga arquivos
+rm -r - apaga diretórios.
+cp - copia arquivos e diretórios
+cp -r - copia diretórios e seus conteudos. 
+cp -v - mostra detalhes.
+mv - movimenta (renomeia) os arquivos.
+----------------------------------------------------------------------------------
+        manipulando Arquivos
+
+tar cf (nome do arqui) - [c] cria um arquivo .tar, [f] indica o nome do arquivo.
+tar cvf (nome do arqui) - [c] cria um arquivo .tar,  [f] indica o nome, [v] lista o processo passo a passo.
+tar tf (nome do arqui) - [t] lista os arquivos agrupados.
+tar xvf (nome do arqui) - [x] extrai.
+tar czvf (nome do arqui) - agrupa e compacta ao mesmo tempo.
+tar xzvf (nome do arqui) - desagrupa e descompacta ao mesmo tempo.
+tar czvpf (nome do arqui ou dir) - compacta arquivos e diretórios.
+tar tzf (nome do arqui) - lista o que foi compactado 
+locate - consulta uma base de dados internos e retorna o que se esta procurando.
+gzip (nome do arqui) - compacta o arquivo.
+gzip -k (nome do arqui) - compacta o arquivo mas o mantem.
+gzip -d ou gunzip (nome do arqui) - descompacta o arquivo.
+updatedb - atualiza a base de dados.
+----------------------------------------------------------------------------------
+        lendo e filtrando arquivos
+
+find (caminho) (-name) (nome do arquivo) - procura por arquivos.
+less - ler arquivos. 
+cat - (nome do arqui) ler arquivos. 
+cat -n (nome do arqui) - numera as linhas
+head - ler só as primeiras linhas de um arquivo.
+head -n1 (nome do arqui) - mostra só uma linha.
+tail -n1 (nome do arqui) - mostra só as ultimas linhas de um arquivo
+tail -f (nome do arqui) - monitora ocorrencias no arquivo.
+> redireciona a saida e perde o que já estava.
+>> redireciona a saida e manten o que já estva.
+wc (nome do arqui) - mostra quantas linhas, palavras, caracteres.
+sort (nome do arqui) - mostra na tela os arquivos de texto em ordem alfabetica. 
+sort -u (nome do arqui) - coloca em ordem alfabetica e remove o que estiver repetido dentro do arquivo.
+uniq (nome do arqui) - só remove o que stiver repetido se estiver em ordem alfabetica.
+uniq -d (nome do arquivo) - mostra só o que é duplicado
+cut -c1-10 (nome do arqui) - filtra por caractere.
+cut -f1 -d"" (nome do arqui) - filtra por campo.
+grep - (string) (nome do arqui) - fitra conteudo de arquivos de texto.
+grep -c (string) - mostra quantas ocorrencias tem a string.
+grep -v (string) - mostra tudo menos a string citada no grep.
+----------------------------------------------------------------------------------
+        permissôes de arquivos
+
+chmod - muda as permissões de arquivos.
+chmod (u g o a) - u = usuários, g = grupos, o = outros, a = todos.
+Ex: chmod u+w add.| remover chmod u-w 
+    chmod g+r add.| remover chmod g-r
+    chmod o+x add.| remover chmod o-x
+   
+
+         Arquivos
+-rw-r--r-- 1 marcos marcos 27452 julho 21 15:40 marquinhos.txt 
+rwx permissões do dono.
+rwx grupo.
+rwx outros
+r = read, w = write, x = execulte.
+----------------------------------------------------------------------------------
+chown (nome do usuário) (nome do arqui) - permite alterar a propriedade do usuário e /
+ou grupo de um determinado arquivo, diretório ou link simbólico.
+
+mudando usuário e grupo: 
+ex: chown Marcos:bruno linux.txt
+
+ chgrp (nome do grupo) (nome do arqui) - muda o nome do grupo.
+----------------------------------------------------------------------------------
+        processos
+
+pstree -p mostra arvores de processos e o pid no linux.
+ps - mostra só os processos do meu usuario no terminal.
+ps -u - mostra mais detahes do processo.
+ps -ux - mostra todos os processos independente do terminal.
+ps -uxa - mostra os processos de todos os usuários.
+pgrep (nome do processo) - mostra o pid do processo.
+kill (numero do processo) - envia sinal para um processo.
+pkill (nome do processo) - mata o processo.
+killall (nome do processo) - mata todos os processos. 
+systemctl - é uma ferramenta para gerenciar serviços do systemd.
+systemctl status (nome do processo) - para ver o status do processo.
+systemctl stop (nome do processo) - para o processo. 
+systemctl start (nome do processo) - inicia o processo.
+systemctl resstart (nome do processo) - reinicia o processo. 
+top - monitora os processos do sistema. 
+free - mostra a memória do pc.
+free -h mostra a memória do pc em formatos mais legivel.
+uptime - mostra quanto tempo a maquina esta ligada.
+df -h - mostra o uso das partições do hd.
+---------------------------------------------------------------------------------
+         pacotes
+
+dpkg -l - lista todos os pacotes instalados.
+dpkg -l (nome do pacote) - lista um pacote especifico
+dpkg -i (nome do pacote) - instala o pacote.
+dpkg -s (nome do pacote) - mostra status do pacote.
+dpkg --purge (nome do pacote) - apaga completamente o pacote.
+---------------------------------------------------------------------------------
+        instalação e atualizaçôes e usuários
+
+sudo su - execulta comandos como usuário root. 
+apt-get update - atualiza suas fontes.
+apt-get upgrade - atualiza todos os pacotes instalados.
+apt-get install (nome do app) - instala.
+apt-get purge (nome do app) - desinstala.
+dmesg - mostra logs do syslog e do bot.
+useradd -m (nome do usúario) add um novo usúario e força a criação do diretorio no ~.
+userdel -r (nome do usúario) - remove usúario.
+usermod -c (nome do usúario) - modifica.
+passwd (nome do usúario) - troca a senha.
+whoami - mostra o usúario que esta logado.
+id - mostra o id do seu usuário.
+groups - mostra os grupos que eu estou associado.
+----------------------------------------------------------------------------------
+                Diretórios importantes
+/var/log - onde fica os logs do sistema.
+/etc/passwd - onde fica todos os usuários do sistema.
+/etc/shadow - onde fica as senhas do usuários.
+/etc/group - onde fica os grupos do sistema.
