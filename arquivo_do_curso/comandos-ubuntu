@@ -43,7 +43,6 @@ ls -ltr - lista o arquivos de forma organizada, e o critério vai ser a data de 
         caracteres
 
 | - combina os comandos.
-; - execulta os comandos sequencialmente.
 . - diretório atual que vc esta.
 * - que substitui um conjunto (zero ou mais de zero) de caracteres;
 [] - fitra por caracteres especificados dentro dos colchetes; 
@@ -52,8 +51,8 @@ ls -ltr - lista o arquivos de forma organizada, e o critério vai ser a data de 
 --------------------------------------------------------------------------
         links
 
-ln -s (arquivo > nome do link) - Cria um link simbólico que aponta para um diretório ou arquivo.
-ln (arquivo > nome do link) - Cria um link fisíco que aponta para o mesmo lugar no disco.
+ln -s (pra onde aponta > nome do link) - Cria um link simbólico que aponta para um diretório ou arquivo.
+ln (para onde aponta > nome do link) - Cria um link fisíco que aponta para o mesmo lugar no disco.
 -----------------------------------------------------------------------------
         pastas e arquivos
 
@@ -63,7 +62,7 @@ rmdir - remove diretórios vazios.
 touch - cria um arquivo em branco.
 rm - apaga arquivos
 rm -r - apaga diretórios.
-cp - copia arquivos e diretórios
+cp - copia arquivos
 cp -r - copia diretórios e seus conteudos. 
 cp -v - mostra detalhes.
 mv - movimenta (renomeia) os arquivos.
@@ -104,6 +103,7 @@ uniq -d (nome do arquivo) - mostra só o que é duplicado
 cut -c1-10 (nome do arqui) - filtra por caractere.
 cut -f1 -d"" (nome do arqui) - filtra por campo.
 grep - (string) (nome do arqui) - fitra conteudo de arquivos de texto.
+grep -i (string) (nome do arqui) ignora as diferenças entre letras maisculas e minusculas.
 grep -c (string) - mostra quantas ocorrencias tem a string.
 grep -v (string) - mostra tudo menos a string citada no grep.
 ----------------------------------------------------------------------------------
@@ -135,9 +135,9 @@ ex: chown Marcos:bruno linux.txt
 
 pstree -p mostra arvores de processos e o pid no linux.
 ps - mostra só os processos do meu usuario no terminal.
-ps -u - mostra mais detahes do processo.
+ps -u - mostra mais detahes do processo no meu terminal.
 ps -ux - mostra todos os processos independente do terminal.
-ps -uxa - mostra os processos de todos os usuários.
+ps -uxa - mostra os processos de todos os usuários independente do terminal .
 pgrep (nome do processo) - mostra o pid do processo.
 kill (numero do processo) - envia sinal para um processo.
 pkill (nome do processo) - mata o processo.
