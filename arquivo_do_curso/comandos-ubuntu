@@ -1,5 +1,5 @@
        informaçôes do sistema
-
+lsb_release -d - mostra a versão instalada do ubuntu.
 env | grep CURRENT_DESKTOP - mostra interface grafica.
 hostname - Mostra o nome da maquina.
 uname -a - serve para exibir informações do sistema.
