@@ -1,0 +1,3 @@
+cp arquivo1 ../pasta1/exemplo-teste1
+Aqui o cp voltou uma pasta entrou na pasta1 copiou da pasta1 o arquivo1 para
+pasta2 com mesmo conteudo mas com outro nome.

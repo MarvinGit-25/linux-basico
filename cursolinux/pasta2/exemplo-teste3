@@ -1,0 +1,3 @@
+p ../pasta/arquivo1 /home/marcos/linux/cursolinux/pasta2/exemplo-teste3 
+Aqui o cp saiu da pasta1 entrou na pasta copiou o arquivo1 e especificou
+o caminho absoluto onde vai ser colado o arquivo1 com outro nome e com mesmo conteudo. 

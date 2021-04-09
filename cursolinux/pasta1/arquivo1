@@ -1,0 +1,2 @@
+cp arquivo1 ../pasta1
+Aqui o cp copiou da pasta  para pasta1 com mesmo conteudo e mesmo nome de arquivo.

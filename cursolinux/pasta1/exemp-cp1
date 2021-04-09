@@ -1,0 +1,2 @@
+cp ../pasta/arquivo1 cp-exem-retro
+qAqui o comando cp saiu da pasta atual voltou uma pasta e entrou na pasta pasta1 copiou o arquivo cp-exem-retro para pasta2 com nome exemplo-teste2 e com mesmo conteudo . 
